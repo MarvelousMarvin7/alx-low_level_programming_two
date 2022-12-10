@@ -8,13 +8,11 @@
 int main(void)
 {
 char alpha, e, q;
-alpha = 'a';
 e = 'e';
 q = 'q';
-while (alpha <= 'z')
+for (alpha = 'a'; alpha <= 'z'; alpha++)
 if (alpha != q && alpha != e)
 putchar(alpha);
-alpha++;
 putchar('\n');
 return (0);
 }
