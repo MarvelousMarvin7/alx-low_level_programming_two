@@ -1,24 +1,37 @@
 #include <stdio.h>
 
 /**
- *main - Output numbers
+ *main - Output combined numbers with comma (,)
  *
  *Return - 0 after success
  */
 int main(void)
 {
-int digit;
+  int i, j;
 
-for (digit = 0; digit <= 99; digit++)
-{
-putchar(digit / 10 + '0');
-putchar(digit % 10 + '0');
-{
-if (digit != 99)
-putchar(',');
-putchar(' ');
-}
-}
-putchar('\n');
-return (0);
+	for (i = 48; i < 58; i++)
+	{
+		for (j = i; j < 58; j++)
+		{
+			if (i == j)
+			{
+				continue;
+			}
+
+			putchar(i);
+			putchar(j);
+
+			if (i == 56 && j == 57)
+			{
+				break;
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
