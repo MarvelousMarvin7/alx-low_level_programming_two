@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
- *main - Output combined numbers with comma (,)
- *
- *Return - 0 after success
+ * main - prints out all the numbers between 00 and 99
+ * with no two digits being the same
+ * Return: 0
  */
 int main(void)
 {
-  int i, j;
+int i, j;
 
 	for (i = 48; i < 58; i++)
 	{
@@ -17,7 +17,6 @@ int main(void)
 			{
 				continue;
 			}
-
 			putchar(i);
 			putchar(j);
 
