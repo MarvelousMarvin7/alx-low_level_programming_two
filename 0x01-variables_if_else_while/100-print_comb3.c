@@ -7,30 +7,21 @@
  */
 int main(void)
 {
-int i, j;
-
-	for (i = 48; i < 58; i++)
-	{
-		for (j = i; j < 58; j++)
-		{
-			if (i == j)
-			{
-				continue;
-			}
-			putchar(i);
-			putchar(j);
-
-			if (i == 56 && j == 57)
-			{
-				break;
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+int d;
+int c;
+for (d = 0; d < 9; d++)
+{
+for (c = d + 1; c <= 9; c++)
+{
+putchar(d + '0');
+putchar(c + '0');
+if (d + c < 17)
+{
+putchar(',');
+putchar(' ');
+}
+}
+}
+putchar('\n');
+return (0);
 }
