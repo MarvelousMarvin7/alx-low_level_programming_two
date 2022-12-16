@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_isdigit = Output digit if condition is true
+ *_isdigit - Output digit if condition is true
  *
  *@c: variable to be tested
  *
