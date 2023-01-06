@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * _strncpy- Copy striings
- * @dest: resulting string
- * @src: appends src to dest
- * @n: n bytes of src
+ * _strcmp- Copy striings
+ * @s1: resulting string
+ * @s2: compares to s1
  * Return: dest
  */
 int _strcmp(char *s1, char *s2)
