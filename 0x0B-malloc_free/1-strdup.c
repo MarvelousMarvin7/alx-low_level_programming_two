@@ -11,8 +11,12 @@
 char *_strdup(char *str)
 {
 	char *ptr;
+	int i;
 
-	ptr = (malloc(sizeof(char)));
+	for (i = 0; str[i]; i++)
+	{
+		ptr = (malloc(sizeof(char) * i));
+	}
 	if (ptr != NULL)
 		strcpy(ptr, str);
 	if (str == NULL)
