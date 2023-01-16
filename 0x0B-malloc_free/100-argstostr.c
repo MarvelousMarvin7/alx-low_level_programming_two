@@ -27,8 +27,8 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		len += strlen(av[i]);
-		strcat (ptr, av[i]);
-		strcat (ptr, "\n");
+		strcat(ptr, av[i]);
+		strcat(ptr, "\n");
 	}
 	return (ptr);
 	free(ptr);
