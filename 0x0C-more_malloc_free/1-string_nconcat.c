@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < (sizeof(s2) + n); i++)
 		if (ptr)
 		{
-			strcpy(ptr, s1);
+			strncpy(ptr, s1, n);
 			strncat(ptr, s2, n);
 		}
 	return (ptr);
