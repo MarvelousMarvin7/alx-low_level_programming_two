@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+0;10;1c#include <stdlib.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -35,7 +35,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			strcpy(ptr, s1);
 			strncat(ptr, s2, n);
 		}
-	ptr[i] = '\0';
 	return (ptr);
 	free(ptr);
 }
