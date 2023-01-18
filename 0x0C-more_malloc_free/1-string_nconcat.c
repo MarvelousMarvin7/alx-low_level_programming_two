@@ -26,16 +26,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= j)
 		n = j;
 
-	ptr = malloc(sizeof(s1) + 1);
+	ptr = malloc(sizeof(s1) + n + 1);
 	if (ptr == NULL)
 		return (NULL);
-	for (i = 0; i < (sizeof(s1) + n); i++)
-		if (ptr)
-		{
-			strcpy(ptr, s1);
-			strncat(ptr, s2, n);
-		}
-	ptr[i] = '\0';
+	if (ptr)
+	{
+		strcpy(ptr, s1);
+		strncat(ptr, s2, n);
+	}
 	return (ptr);
 	free(ptr);
 }
