@@ -13,43 +13,41 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ndog;
-	int i, j, k;
+	int i, ln, lo;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
-	/*create space for size of ndog pointer*/
-	ndog = malloc(sizeof(ndog));
-	if (ndog == NULL || name == 0 || owner == 0)
+
+	ndog = malloc(sizeof(dog_t));
+	if (ndog == NULL)
 	{
 		return (NULL);
 		free(ndog);
 	}
-	/*assign j and k as name and owner*/
-	for (j = 0; name[j]; j++)
+	for (ln = 0; name[ln]; ln++)
 		;
-	for (k = 0; owner[k]; k++)
+	ndog->name = malloc(sizeof(char) * ln);
+	if (ndog->name == NULL)
+	{
+		free(ndog);
+		return (NULL);
+	}
+	for (lo = 0; owner[lo]; lo++)
 		;
-	/*create space for the input of name and owner*/
-	ndog->name = malloc(j + 1);
-	ndog->owner = malloc(k + 1);
-
-	if (ndog->name == 0 || ndog->owner == 0)
+	ndog->owner = malloc(sizeof(char) * lo);
+	if (ndog->owner == NULL)
 	{
 		free(ndog->name);
-		free(ndog->owner);
 		free(ndog);
 		return (NULL);
 	}
-
-	for (i = 0; i < j; i++)
+	for (i = 0; i < ln; i++)
 		ndog->name[i] = name[i];
-	ndog->name[i] = '\0';
 
 	ndog->age = age;
 
-	for (i = 0; i < k; i++)
+	for (i = 0; i < lo; i++)
 		ndog->owner[i] = owner[i];
-	ndog->owner[i] = '\0';
 
 	return (ndog);
 }
