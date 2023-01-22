@@ -19,7 +19,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	/*create space for size of ndog pointer*/
 	ndog = malloc(sizeof(ndog));
-	if (ndog == NULL)
+	if (ndog == NULL || name == 0 || owner == 0)
 	{
 		return (NULL);
 		free(ndog);
