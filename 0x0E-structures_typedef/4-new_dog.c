@@ -4,7 +4,6 @@
 
 /**
  * new_dog - creates new dog
- * @new_dog: - pointer to struct
  * @name: name of dog
  * @age: age of dog
  * @owner: Owner of dog
@@ -25,7 +24,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 		free(ndog);
 	}
-
 	/*assign j and k as name and owner*/
 	for (j = 0; name[j]; j++)
 		;
@@ -33,7 +31,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		;
 	/*create space for the input of name and owner*/
 	ndog->name = malloc(sizeof(j + 1));
-
 	ndog->owner = malloc(sizeof(k + 1));
 
 	if (ndog->name == 0 || ndog->owner == 0)
