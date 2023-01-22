@@ -30,8 +30,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (k = 0; owner[k]; k++)
 		;
 	/*create space for the input of name and owner*/
-	ndog->name = malloc(sizeof(j + 1));
-	ndog->owner = malloc(sizeof(k + 1));
+	ndog->name = malloc(j + 1);
+	ndog->owner = malloc(k + 1);
 
 	if (ndog->name == 0 || ndog->owner == 0)
 	{
